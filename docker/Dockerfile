@@ -1,6 +1,6 @@
 FROM multiarch/alpine:amd64-latest-stable AS build
 RUN apk add --no-cache alpine-sdk gcc linux-headers ncurses-dev librtlsdr-dev cmake libusb-dev bash
-RUN git clone https://github.com/weetmuts/wmbusmeters.git && \
+RUN git clone https://github.com/zleba/wmbusmeters.git && \
     git clone https://github.com/weetmuts/rtl-wmbus.git && \
     git clone https://github.com/merbanan/rtl_433.git
 WORKDIR /wmbusmeters
