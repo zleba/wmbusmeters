@@ -47,6 +47,7 @@ static bool ok = registerDriver([](DriverInfo&di)
     //              MANUFACTURER_QDS, 0x07,  0x18 waiting for telegram for test suite.
     di.addDetection(MANUFACTURER_QDS, 0x06,  0x35);
     di.addDetection(MANUFACTURER_QDS, 0x07,  0x35);
+    di.addDetection(MANUFACTURER_QDS, 0x07,  0x16);
 
     di.setConstructor([](MeterInfo& mi, DriverInfo& di){ return shared_ptr<Meter>(new MeterQWater(mi, di)); });
 });
